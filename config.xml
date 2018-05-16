@@ -22,7 +22,7 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
-    <plugin name="cordova-plugin-firebase" spec="^1.0.4" />
+    <plugin name="cordova-plugin-firebase" spec="^1.0.0" />
     <engine name="android" spec="^7.0.0" />
 
 </widget>
