@@ -1,8 +1,19 @@
+html{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+}
+	
 img {
 	width: 100%;
-    height: auto;
+	height: 100%;
 }
-
+	
 .page-header1{
 	background-color: #c498cd;
 }
@@ -10,13 +21,14 @@ img {
 .page-header2{
 	background-color: #ddc4e2;
 }
-
+	
 .first-pages {
 	background-image: url("../img/background.jpg");
-    background-size: cover;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: bottom center;
 	background-attachment: fixed;
+	min-height: 100%;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
