@@ -1,6 +1,6 @@
 //Tworzenie nowego konta
 
-$('#button').click(
+$('#newAccount').click(
     
     function createNewAccount(){    
         
