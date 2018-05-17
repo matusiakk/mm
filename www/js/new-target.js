@@ -38,11 +38,9 @@ var dbRef = firebase.database().ref().child(name);
 		progress : progress
 	})
 	console.log(name +"\n"+user+"\n"+targetName+"\n"+targetDescription+"\n"+end+"\n"+agree+"\n"+progress);
+	alert("Zapisano cel o nazwie: "+ targetName +".")
 	
-	if (confirm("Zapisano cel o nazwie: "+ targetName +".")) {
-		window.location.replace("./list-of-targets.html");
-    } else {      
-    }
+		setTimeout(function(){ window.location.replace("./list-of-targets.html"); }, 3000);
 	
 	}
-	})
+})

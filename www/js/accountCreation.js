@@ -1,39 +1,40 @@
-//tworzenie nowego konta
+//Tworzenie nowego konta
 
-$('#newAccount').click(
+$('#button').click(
+    
+    function createNewAccount(){    
+        
+        var email = $("#emailField").val();
+        var password = $("#pswdField").val();
+        var regex = RegExp("[0-9]");
+        
+        if (email == "" ){
 
-    function createNewAccount() {
-
-        let email = $("#emailField").val();
-        let password = $("#pswdField").val();
-        let regex = RegExp("[0-9]");
-
-        if (email == "") {
-
-            alert("Podaj swój adres email");
+            alert("Email field cannot be blank");
         }
-
-        if (password.length < 8 || !regex.test(password)) {
-            alert("Twoje hasło powinno składać się z minimum 8 znaków, w tym minimum 1 cyfry");
+        
+        if(password.length<8 || !regex.test(password)){
+            alert("The password must have at least 8 characters and at least 1 digit");
 
         } else {
-            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-                let errorCode = error.code;
-                let errorMessage = error.message;
+            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error){
+                var errorCode = error.code;
+                var errorMessage = error.message;
                 console.log(errorMessage)
+                
+                if(errorCode == "auth/weak-password"){
 
-                if (errorCode == "auth/weak-password") {
-
-                    alert("Twoje hasło jest za słabe");
+                    alert("Your password is too weak");
 
                 }
             });
-
-            $(function () {
+            
+            $(function(){
                 $("#emailField").val("");
                 $("#pswdField").val("");
-                alert("Konto zostało utworzone!");
-                window.location.replace("./welcome.html");
-            });
+                
+
+            alert("Account created successully!");
+        });
         };
     });
