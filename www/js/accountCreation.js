@@ -35,6 +35,7 @@ $('#newAccount').click(
                 
 
             alert("Account created successully!");
+			setTimeout(function(){ window.location.replace("./main-page.html"); }, 3000);
         });
         };
     });
