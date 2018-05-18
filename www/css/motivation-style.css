@@ -1,0 +1,86 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+body{ 
+	background-image: url("../img/background-light.jpg");
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-attachment: fixed;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	min-height: 100vh;
+	display:flex;
+	flex-direction: column;
+}
+
+.flex{
+	display:flex;
+	flex-direction: column;
+	flex-wrap: wrap ;
+}
+
+.page-header2 img{
+	width:100%;
+}
+
+#container-header{
+	width:100%;
+}
+
+#container-content
+{
+	width:100%;
+}
+
+#motivation-container{
+	flex-grow: 1;
+	display: flex;
+	padding: 0px;
+	margin:0px;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-content: center;
+	align-items: stretch;
+	
+}
+
+.arrow{
+	align-self: center;
+	width:4%;
+}
+
+#motivation{
+	align-self: center;
+	max-height:65vh;
+	max-width:75vw;
+	width: auto;
+	height: auto;
+}
+
+.hidden{
+	visibility: hidden;
+}
+
+.footer > p{
+
+	margin-bottom: 0px;
+}
+
+.footer-inspiration{
+	height: 4.5vh;
+	padding: 0;
+	text-align: center;
+	background-color: black;
+	color: white;
+	font-size: 1.4vh;
+	vertical-align: text-bottom;
+}
+
+
+@media only screen and (min-width: 750px) {
+    #motivation{
+		max-height:45vh;
+	}
+}

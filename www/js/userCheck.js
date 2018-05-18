@@ -1,8 +1,15 @@
-firebase.auth().onAuthStateChanged(function (user) {
-  if (user) {
+$('#google').click(
 
-    let user = firebase.auth().currentUser;
-    window.location.replace("./main-page.html");
-  } else {
-  }
-});
+  function () {
+    if (!firebase.auth().currentUser) {
+      let provider = new firebase.auth.GoogleAuthProvider();
+
+      firebase.auth().signInWithRedirect(provider);
+
+    } else {
+
+      firebase.auth().signOut();
+
+    }
+
+  });

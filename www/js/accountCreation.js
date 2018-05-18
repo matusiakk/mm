@@ -1,41 +1,39 @@
-//Tworzenie nowego konta
+//tworzenie nowego konta
 
 $('#newAccount').click(
-    
-    function createNewAccount(){    
-        
-        var email = $("#emailField").val();
-        var password = $("#pswdField").val();
-        var regex = RegExp("[0-9]");
-        
-        if (email == "" ){
 
-            alert("Email field cannot be blank");
+    function createNewAccount() {
+
+        let email = $("#emailField").val();
+        let password = $("#pswdField").val();
+        let regex = RegExp("[0-9]");
+
+        if (email == "") {
+
+            alert("Podaj swój adres email");
         }
-        
-        if(password.length<8 || !regex.test(password)){
-            alert("The password must have at least 8 characters and at least 1 digit");
+
+        if (password.length < 8 || !regex.test(password)) {
+            alert("Twoje hasło powinno składać się z minimum 8 znaków, w tym minimum 1 cyfry");
 
         } else {
-            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error){
-                var errorCode = error.code;
-                var errorMessage = error.message;
+            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+                let errorCode = error.code;
+                let errorMessage = error.message;
                 console.log(errorMessage)
-                
-                if(errorCode == "auth/weak-password"){
 
-                    alert("Your password is too weak");
+                if (errorCode == "auth/weak-password") {
+
+                    alert("Twoje hasło jest za słabe");
 
                 }
             });
-            
-            $(function(){
+
+            $(function () {
                 $("#emailField").val("");
                 $("#pswdField").val("");
-                
-
-            alert("Account created successully!");
-			setTimeout(function(){ window.location.replace("./main-page.html"); }, 3000);
-        });
+                alert("Konto zostało utworzone!");
+                window.location.replace("./welcome.html");
+            });
         };
     });

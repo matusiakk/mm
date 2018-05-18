@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+		<link href="css/stylesheet.css" rel="stylesheet" type="text/css"/>
+		<link href="bootstrap-social.css" rel="stylesheet" type="text/css"/>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<script src="js/pgb.js"></script>
+		<script src="cordova.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<link href="css/motivation-style.css" rel="stylesheet" type="text/css"/>
+  	</head>
+  	<body class="next-pages">
+    	<div id="container-header">
+				<div class="page-header2">
+					<a href="main-page.html">
+						<img src="img/logo.png" alt="logo"/>
+					</a>
+				</div>
+		</div>
+		<div id="container-content">	
+			<nav>
+				<ul>
+				   	<li class="nav-item">
+			     		<a class="nav-link" href="new-target.html">Zdefiniuj nowy cel</a>
+					</li>
+					<li>
+					    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Inspiracja na dziś</a>
+					    <div class="dropdown-menu">
+					    	<a class="dropdown-item" href="inspiration-motivation.html">Motywacja</a>
+					        <a class="dropdown-item" href="inspiration-fitness.html">Fitness</a>
+					        <a class="dropdown-item" href="inspiration-food.html">Zdrowe odżywianie</a>
+							<a class="dropdown-item" href="inspiration-traveling.html">Podróże</a>
+					    </div>
+					</li>
+					<li class="nav-item">
+					      <a class="nav-link" href="info.html">Informacje o aplikacji</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div id="motivation-container" class="hidden">
+				<div class="arrow" onclick="prevImage()">
+					<img src="img/left-arrow.svg" width="100%">
+				</div>
+		  		<img id="motivation" src="" alt="motivation">
+			  	<div class="arrow" onclick="nextImage()">
+			  		<img src="img/right-arrow.svg" width="100%">
+				</div>
+		</div>
+		<div class="footer-inspiration">
+			<p id="info">Aplikacja zaliczeniowa z przedmiotu 'Bogate Aplikacje Internetowe' </br> Autorzy: K. Matusiak, A. Munk, M. Górka, Z. Gil</p>
+		</div>
+	
+	    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous">
+	    </script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+	    </script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
+	    </script>
+	    <script src="js/load-inspirations.js"></script>
+  	</body>
+</html>

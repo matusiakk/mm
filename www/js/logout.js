@@ -1,8 +1,9 @@
 // wylogowanie
 
-$('#log-off').click(function () {
+$("#logout").click(function () {
   firebase.auth().signOut().then(function () {
-    window.location.replace("./index.html");
+    alert("Wylogowano");
+    window.location.replace("index.html");
   }).catch(function (error) {
   });
 });
